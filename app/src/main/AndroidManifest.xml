@@ -9,16 +9,38 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Enigme10Activity"></activity>
+        <activity android:name=".Enigme9Activity" />
+        <activity android:name=".Enigme8Activity" />
+        <activity android:name=".Enigme7Activity" />
+        <activity android:name=".Enigme6Activity" />
+        <activity android:name=".Enigme5Activity" />
+        <activity android:name=".Enigme4Activity" />
+        <activity android:name=".Enigme3Activity" />
+        <activity android:name=".Enigme2Activity" />
+        <activity android:name=".Enigme1Activity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
+        <activity android:name=".MainActivity" />
     </application>
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 </manifest>

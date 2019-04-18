@@ -41,64 +41,74 @@ public class ImportApi extends AppCompatActivity {
                                 JSONObject eggs = list.getJSONObject(0);
                                 String eggOfTuna = eggs.getString("name");
                                 String rarityegg = eggs.getString("rarity");
+                                String urlPicEgg = eggs.getString("image");
                                 tvName.append(eggOfTuna);
 
                                 JSONObject egg2 = list.getJSONObject(1);
                                 String eggOfFlounderWinter = egg2.getString("name");
                                 String rarityegg2 = eggs.getString("rarity");
+                                String urlPicEgg2 = eggs.getString("image");
                                 tvName.append(eggOfFlounderWinter);
 
                                 JSONObject egg3 = list.getJSONObject(8);
                                 String eggOfKiwi = egg3.getString("name");
                                 String rarityegg3 = eggs.getString("rarity");
+                                String urlPicEgg3 = eggs.getString("image");
                                 tvName.append(eggOfKiwi);
 
                                 JSONObject egg4 = list.getJSONObject(11);
                                 String rarityegg4 = eggs.getString("rarity");
                                 String eggOfChameleon = egg4.getString("name");
+                            String urlPicEgg4 = eggs.getString("image");
                                 tvName.append(eggOfChameleon);
 
                                 JSONObject egg5 = list.getJSONObject(36);
                                 String rarityegg5 = eggs.getString("rarity");
                                 String eggOfSturgeonAtlantic = egg5.getString("name");
+                            String urlPicEgg5 = eggs.getString("image");
                                 tvName.append(eggOfSturgeonAtlantic);
 
                                 JSONObject egg6 = list.getJSONObject(37);
                                 String rarityegg6 = eggs.getString("rarity");
                                 String eggOfFrogBull = egg6.getString("name");
+                            String urlPicEgg6 = eggs.getString("image");
                                 tvName.append(eggOfFrogBull);
 
                                 JSONObject egg7 = list.getJSONObject(38);
                                 String rarityegg7 = eggs.getString("rarity");
                                 String eggOfOstrich = egg7.getString("name");
+                            String urlPicEgg7 = eggs.getString("image");
                                 tvName.append(eggOfOstrich);
 
                                 JSONObject egg8 = list.getJSONObject(40);
                                 String rarityegg8 = eggs.getString("rarity");
                                 String eggOfEelAmerican = egg8.getString("name");
+                            String urlPicEgg8 = eggs.getString("image");
                                 tvName.append(eggOfEelAmerican);
 
                                 JSONObject egg9 = list.getJSONObject(48);
                                 String rarityegg9 = eggs.getString("rarity");
                                 String eggOfFrogleopard = egg9.getString("name");
+                            String urlPicEgg9 = eggs.getString("image");
                                 tvName.append(eggOfFrogleopard);
 
                                 JSONObject egg10 = list.getJSONObject(51);
                                 String rarityegg10 = eggs.getString("rarity");
                                 String eggOfPokemon = egg10.getString("name");
+                            String urlPicEgg10 = eggs.getString("image");
                                 tvName.append(eggOfPokemon);
 
                                 String[] [] eggsArray = new String [][]{
-                                        {eggOfTuna , rarityegg },
-                                        {eggOfFlounderWinter , rarityegg2},
-                                        {eggOfKiwi , rarityegg3},
-                                        {eggOfChameleon,rarityegg4},
-                                        {eggOfSturgeonAtlantic,rarityegg5},
-                                        {eggOfFrogBull,rarityegg6},
-                                        {eggOfOstrich,rarityegg7},
-                                        {eggOfEelAmerican,rarityegg8},
-                                        {eggOfFrogleopard,rarityegg9},
-                                        {eggOfPokemon,rarityegg10},
+                                        {eggOfTuna , rarityegg , urlPicEgg},
+                                        {eggOfFlounderWinter , rarityegg2, urlPicEgg2},
+                                        {eggOfKiwi , rarityegg3, urlPicEgg3},
+                                        {eggOfChameleon,rarityegg4, urlPicEgg4},
+                                        {eggOfSturgeonAtlantic,rarityegg5, urlPicEgg5},
+                                        {eggOfFrogBull,rarityegg6, urlPicEgg6},
+                                        {eggOfOstrich,rarityegg7, urlPicEgg7},
+                                        {eggOfEelAmerican,rarityegg8, urlPicEgg8},
+                                        {eggOfFrogleopard,rarityegg9, urlPicEgg9},
+                                        {eggOfPokemon,rarityegg10, urlPicEgg10},
 
                                 };
 

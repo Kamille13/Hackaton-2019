@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Hackaton2019</string>
+    <string name="egg_hunter">EGG HUNTER</string>
+    <string name="c_est_parti">C\'est parti !!</string>
+    <string name="eggs">eggs</string>
+    <string name="bienvenue_dans_egghunter_dans_ce_jeu_de_parcours_tu_devras_te_rendre_a_differents_endroits_afin_de_recuperer_des_oeufs_et_ainsi_pouvoir_acceder_au_l_enigme_ultime_et_ainsi_obtenir_la_carte_ultime_de_tout_les_oeufs_presents_dans_toulouse_pour_ce_faire_tu_devras_r_soudre_des_enigmes_ou_des_questions_de_culture_g_n_rale_afin_d_acceder_a_l_oeuf_suivant_allez_lance_toi">Bienvenue dans EggHunter, dans ce jeu de parcours tu devras te rendre a differents endroits afin de recuperer des oeufs et ainsi pouvoir acceder au l\'enigme ultime et ainsi obtenir la carte ultime de tout les oeufs presents dans Toulouse. Pour ce faire tu devras résoudre des enigmes ou des questions de culture générale afin d\'acceder a l\'oeuf suivant. Allez lance toi !!</string>
 </resources>

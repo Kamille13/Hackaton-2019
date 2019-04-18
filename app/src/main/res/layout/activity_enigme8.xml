@@ -10,8 +10,8 @@
         android:id="@+id/imageView17"
         android:layout_width="200dp"
         android:layout_height="250dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginTop="100dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,8 +22,8 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="100dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
@@ -37,6 +37,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="106dp"
         android:layout_marginRight="106dp"
+        android:text="@string/annie_deux_enfants_le_premier_est_une_fille_combien_de_chance_y_a_t_il_que_le_second_soit_un_gar_on"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView17" />
@@ -47,8 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="100dp"
-        android:text="Button"
+        android:layout_marginTop="50dp"
+        android:text="@string/_1_2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -59,7 +60,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="32dp"
-        android:text="Button"
+        android:text="@string/_2_3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button33" />
 
@@ -67,10 +68,10 @@
         android:id="@+id/button35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
-        android:text="Button"
+        android:text="@string/_3_4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -81,7 +82,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
-        android:text="Button"
+        android:text="@string/_1_4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button35" />
 </android.support.constraint.ConstraintLayout>

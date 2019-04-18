@@ -8,10 +8,15 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ImportApiCharacters"></activity>
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/network_security_config" />
+
+        <activity android:name=".ImportApiCharacters" />
         <activity android:name=".ImportApi" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -20,7 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Enigme10Activity"></activity>
+        <activity android:name=".Enigme10Activity" />
         <activity android:name=".Enigme9Activity" />
         <activity android:name=".Enigme8Activity" />
         <activity android:name=".Enigme7Activity" />
@@ -44,9 +49,7 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
-
-        </activity>
+            android:label="@string/title_activity_maps"></activity>
     </application>
 
 </manifest>

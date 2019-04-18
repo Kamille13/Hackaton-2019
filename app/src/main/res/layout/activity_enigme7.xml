@@ -10,8 +10,8 @@
         android:id="@+id/imageView15"
         android:layout_width="200dp"
         android:layout_height="250dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginTop="100dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,8 +22,8 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="100dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
@@ -32,6 +32,7 @@
         android:id="@+id/textView8"
         android:layout_width="200dp"
         android:layout_height="100dp"
+        android:text="@string/combien_de_verres_contient_un_m_tre_de_ricard"
         android:layout_marginStart="106dp"
         android:layout_marginLeft="106dp"
         android:layout_marginTop="32dp"
@@ -47,8 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="100dp"
-        android:text="Button"
+        android:layout_marginTop="50dp"
+        android:text="@string/_10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -59,7 +60,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="32dp"
-        android:text="Button"
+        android:text="@string/_12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button29" />
 
@@ -67,10 +68,10 @@
         android:id="@+id/button31"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
-        android:text="Button"
+        android:text="@string/_14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -81,7 +82,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
-        android:text="Button"
+        android:text="@string/_17"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button31" />
 </android.support.constraint.ConstraintLayout>

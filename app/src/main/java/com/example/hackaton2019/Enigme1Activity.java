@@ -1,8 +1,11 @@
 package com.example.hackaton2019;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -25,14 +28,10 @@ public class Enigme1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enigme1);
 
-        // Crée une file d'attente pour les requêtes vers l'API
-        // Crée une file d'attente pour les requêtes vers l'API
         RequestQueue requestQueue = Volley.newRequestQueue(this);
 
-        // TODO : URL de la requête vers l'API
         String url = "http://easteregg.wildcodeschool.fr/api/eggs";
 
-        // Création de la requête vers l'API, ajout des écouteurs pour les réponses et erreurs possibles
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 Request.Method.GET, url, null,
                 new Response.Listener<JSONArray>() {
@@ -61,7 +60,6 @@ public class Enigme1Activity extends AppCompatActivity {
                 }
         );
 
-        // On ajoute la requête à la file d'attente
         requestQueue.add(jsonArrayRequest);
 
         RequestQueue request = Volley.newRequestQueue(this);
@@ -69,7 +67,6 @@ public class Enigme1Activity extends AppCompatActivity {
         // TODO : URL de la requête vers l'API
         String url2 = "http://easteregg.wildcodeschool.fr/api/characters/";
 
-        // Création de la requête vers l'API, ajout des écouteurs pour les réponses et erreurs possibles
         JsonArrayRequest jsonArrayRequest2 = new JsonArrayRequest(
                 Request.Method.GET, url2, null,
                 new Response.Listener<JSONArray>() {
@@ -99,7 +96,19 @@ public class Enigme1Activity extends AppCompatActivity {
                 }
         );
 
-        // On ajoute la requête à la file d'attente
         request.add(jsonArrayRequest2);
+
+        Button reponsejuste = findViewById(R.id.button3);
+        reponsejuste.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Enigme1Activity.this, "Bonne réponse, bravo!", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(Enigme1Activity.this,MapsActivity.class);
+                startActivity(intent);
+
+
+
+            }
+        });
     }
 }

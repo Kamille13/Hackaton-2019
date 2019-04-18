@@ -111,9 +111,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(stadium).title("Royaume des Bipeds"));
         mMap.addMarker(new MarkerOptions().position(ernestWallon).title("Royaume des barbares"));
 
-        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+        mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override
-            public boolean onMarkerClick(Marker marker) {
+            public void onInfoWindowClick(Marker marker){
                 if (marker.getTitle().equals("Royaume des érudies")){
                     Intent intent1 = new Intent(MapsActivity.this,MainActivity.class);
                     startActivity(intent1);
@@ -154,7 +154,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     Intent intent1 = new Intent(MapsActivity.this,MainActivity.class);
                     startActivity(intent1);
                 }
-                return false;
+
             }
         });
 

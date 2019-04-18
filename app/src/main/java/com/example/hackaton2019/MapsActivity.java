@@ -115,43 +115,43 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onInfoWindowClick(Marker marker){
                 if (marker.getTitle().equals("Royaume des érudies")){
-                    Intent intent1 = new Intent(MapsActivity.this,MainActivity.class);
+                    Intent intent1 = new Intent(MapsActivity.this,Enigme1Activity.class);
                     startActivity(intent1);
                 }
                 if (marker.getTitle().equals("Place du Roi")){
-                    Intent intent1 = new Intent(MapsActivity.this,MainActivity.class);
+                    Intent intent1 = new Intent(MapsActivity.this,Enigme2Activity.class);
                     startActivity(intent1);
                 }
                 if (marker.getTitle().equals("Royaume des Chercheurs")){
-                    Intent intent1 = new Intent(MapsActivity.this,MainActivity.class);
+                    Intent intent1 = new Intent(MapsActivity.this,Enigme3Activity.class);
                     startActivity(intent1);
                 }
                 if (marker.getTitle().equals("Entrée du marché noir")){
-                    Intent intent1 = new Intent(MapsActivity.this,MainActivity.class);
+                    Intent intent1 = new Intent(MapsActivity.this,Enigme4Activity.class);
                     startActivity(intent1);
                 }
                 if (marker.getTitle().equals("Place de l'orient")){
-                    Intent intent1 = new Intent(MapsActivity.this,MainActivity.class);
+                    Intent intent1 = new Intent(MapsActivity.this,Enigme5Activity.class);
                     startActivity(intent1);
                 }
                 if (marker.getTitle().equals("Jugement des scélérats")){
-                    Intent intent1 = new Intent(MapsActivity.this,MainActivity.class);
+                    Intent intent1 = new Intent(MapsActivity.this,Enigme6Activity.class);
                     startActivity(intent1);
                 }
                 if (marker.getTitle().equals("Royaume des pochards")){
-                    Intent intent1 = new Intent(MapsActivity.this,MainActivity.class);
+                    Intent intent1 = new Intent(MapsActivity.this,Enigme7Activity.class);
                     startActivity(intent1);
                 }
                 if (marker.getTitle().equals("Royaume des exhilées")){
-                    Intent intent1 = new Intent(MapsActivity.this,MainActivity.class);
+                    Intent intent1 = new Intent(MapsActivity.this,Enigme8Activity.class);
                     startActivity(intent1);
                 }
                 if (marker.getTitle().equals("Royaume des Bipeds")){
-                    Intent intent1 = new Intent(MapsActivity.this,MainActivity.class);
+                    Intent intent1 = new Intent(MapsActivity.this,Enigme9Activity.class);
                     startActivity(intent1);
                 }
                 if (marker.getTitle().equals("Royaume des barbares")){
-                    Intent intent1 = new Intent(MapsActivity.this,MainActivity.class);
+                    Intent intent1 = new Intent(MapsActivity.this,Enigme10Activity.class);
                     startActivity(intent1);
                 }
 

@@ -1,6 +1,7 @@
 package com.example.hackaton2019;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -56,6 +57,8 @@ public class Enigme10Activity extends AppCompatActivity {
                                     Toast.makeText(Enigme10Activity.this, "Bravo tu as trouvé la bonne réponse! ", Toast.LENGTH_LONG).show();
                                     Intent intent = new Intent(Enigme10Activity.this,MapsActivity.class);
                                     startActivity(intent);
+                                    MediaPlayer mpVous = MediaPlayer.create(Enigme10Activity.this,R.raw.ring);
+                                    mpVous.start();
                                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                                     EggsWins eggs = new EggsWins(eggName, urlPicEgg10);
                                     DatabaseReference studentRef = database.getReference("Eggs");
@@ -141,6 +144,8 @@ public class Enigme10Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(Enigme10Activity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Enigme10Activity.this,MapsActivity.class);
+                MediaPlayer mpVous = MediaPlayer.create(Enigme10Activity.this,R.raw.haha);
+                mpVous.start();
                 startActivity(intent);
             }
         });
@@ -149,6 +154,8 @@ public class Enigme10Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(Enigme10Activity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Enigme10Activity.this,MapsActivity.class);
+                MediaPlayer mpVous = MediaPlayer.create(Enigme10Activity.this,R.raw.haha);
+                mpVous.start();
                 startActivity(intent);
             }
         });
@@ -157,6 +164,8 @@ public class Enigme10Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(Enigme10Activity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Enigme10Activity.this,MapsActivity.class);
+                MediaPlayer mpVous = MediaPlayer.create(Enigme10Activity.this,R.raw.haha);
+                mpVous.start();
                 startActivity(intent);
             }
         });

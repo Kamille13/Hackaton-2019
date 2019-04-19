@@ -1,6 +1,7 @@
 package com.example.hackaton2019;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,6 +30,8 @@ public class FinalBossActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_boss);
+        MediaPlayer mpVous = MediaPlayer.create(FinalBossActivity.this,R.raw.vous);
+        mpVous.start();
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
 

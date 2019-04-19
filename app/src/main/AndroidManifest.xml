@@ -12,7 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FinalBossActivity"></activity>
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".FinalBossActivity" />
         <activity android:name=".EasterEggActivity" />
         <activity android:name=".ListViewEggsWins" />
         <activity android:name=".ImportApiCharacters" />
@@ -23,11 +30,7 @@
 
         <activity android:name=".ImportApi" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Enigme10Activity" />
         <activity android:name=".Enigme9Activity" />

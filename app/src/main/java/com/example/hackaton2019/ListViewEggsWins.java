@@ -26,19 +26,17 @@ public class ListViewEggsWins extends AppCompatActivity {
         studentRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                List<EggsWins> listEggsWins = new ArrayList<>();
                 for (DataSnapshot eggSnapshot : dataSnapshot.getChildren()) {
                     EggsWins eggs = eggSnapshot.getValue(EggsWins.class);
 
-                    EggsWins egg1 = new EggsWins(eggs.getName(),eggs.getUrl());
+                    listEggsWins.add(eggs);
 
-                    List<EggsWins> listEggsWins = new ArrayList<>();
-                    listEggsWins.add(egg1);
-
-                    ListView listEgg = findViewById(R.id.listMenu);
-                    EggAdapteur adapter = new EggAdapteur(ListViewEggsWins.this, listEggsWins);
-                    listEgg.setAdapter(adapter);
 
                 }
+                ListView listEgg = findViewById(R.id.listMenu);
+                EggAdapteur adapter = new EggAdapteur(ListViewEggsWins.this, listEggsWins);
+                listEgg.setAdapter(adapter);
             }
 
             @Override

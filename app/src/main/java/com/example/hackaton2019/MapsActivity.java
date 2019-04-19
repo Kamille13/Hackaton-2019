@@ -3,6 +3,7 @@ package com.example.hackaton2019;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.media.MediaPlayer;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
@@ -120,6 +121,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 String longitude = lonFinal.getText().toString();
                 if(latitude.equals("43.5977") || (longitude.equals("1.403"))){
                     LatLng wild = new LatLng(43.5977, 1.403);
+                    MediaPlayer mpVous = MediaPlayer.create(MapsActivity.this,R.raw.eclair);
+                    mpVous.start();
                     mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.gandalf)).position(wild).title("Final Boss !"));
                     mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(
                             MapsActivity.this, R.raw.darkmap));

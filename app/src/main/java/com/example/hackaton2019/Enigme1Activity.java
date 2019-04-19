@@ -61,6 +61,7 @@ public class Enigme1Activity extends AppCompatActivity {
                                     DatabaseReference studentRef = database.getReference("Eggs");
                                     studentRef.push().setValue(eggs);
 
+
                                 }
                             });
 

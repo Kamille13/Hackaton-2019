@@ -58,6 +58,8 @@ public class FinalBossActivity extends AppCompatActivity {
                                     Toast.makeText(FinalBossActivity.this, "Bravo tu as trouvé la bonne réponse! ", Toast.LENGTH_LONG).show();
                                     Intent intent = new Intent(FinalBossActivity.this,MapsActivity.class);
                                     startActivity(intent);
+                                    MediaPlayer mpVous = MediaPlayer.create(FinalBossActivity.this,R.raw.applause);
+                                    mpVous.start();
                                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                                     EggsWins eggs = new EggsWins(name, urlPicEgg);
                                     DatabaseReference studentRef = database.getReference("Eggs");
@@ -129,6 +131,8 @@ public class FinalBossActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(FinalBossActivity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(FinalBossActivity.this,MapsActivity.class);
+                MediaPlayer mpVous = MediaPlayer.create(FinalBossActivity.this,R.raw.nope);
+                mpVous.start();
                 startActivity(intent);
             }
         });
@@ -137,6 +141,8 @@ public class FinalBossActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(FinalBossActivity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(FinalBossActivity.this,MapsActivity.class);
+                MediaPlayer mpVous = MediaPlayer.create(FinalBossActivity.this,R.raw.nope);
+                mpVous.start();
                 startActivity(intent);
             }
         });
@@ -145,6 +151,8 @@ public class FinalBossActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(FinalBossActivity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(FinalBossActivity.this,MapsActivity.class);
+                MediaPlayer mpVous = MediaPlayer.create(FinalBossActivity.this,R.raw.nope);
+                mpVous.start();
                 startActivity(intent);
             }
         });

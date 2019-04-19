@@ -17,6 +17,8 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -114,7 +116,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 String longitude = lonFinal.getText().toString();
                 if(latitude.equals("43.5977") || (longitude.equals("1.403"))){
                     LatLng wild = new LatLng(43.5977, 1.403);
-                    mMap.addMarker(new MarkerOptions().position(wild).title("Final Boss !"));
+                    mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.icon)).position(wild).title("Final Boss !"));
                 }
                 else {
                     Toast.makeText(MapsActivity.this, "Mauvaises informations", Toast.LENGTH_SHORT).show();

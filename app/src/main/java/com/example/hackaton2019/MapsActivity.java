@@ -20,6 +20,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -59,6 +60,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         checkLocationPermission();
+
 
         FloatingActionButton eggButton = findViewById(R.id.floatingActionButton);
         eggButton.setOnClickListener(new View.OnClickListener() {
@@ -105,6 +107,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLng(toulouse));
         float zoomLevel = 13.0f; //This goes up to 21
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(toulouse, zoomLevel));
+        mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(
+                MapsActivity.this, R.raw.whitemap));
 
         Button button = findViewById(R.id.btMarker);
         button.setOnClickListener(new View.OnClickListener() {
@@ -116,7 +120,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 String longitude = lonFinal.getText().toString();
                 if(latitude.equals("43.5977") || (longitude.equals("1.403"))){
                     LatLng wild = new LatLng(43.5977, 1.403);
-                    mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.icon)).position(wild).title("Final Boss !"));
+                    mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.gandalf)).position(wild).title("Final Boss !"));
+                    mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(
+                            MapsActivity.this, R.raw.darkmap));
                 }
                 else {
                     Toast.makeText(MapsActivity.this, "Mauvaises informations", Toast.LENGTH_SHORT).show();

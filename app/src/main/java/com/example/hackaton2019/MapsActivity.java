@@ -9,6 +9,9 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -101,6 +104,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         float zoomLevel = 13.0f; //This goes up to 21
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(toulouse, zoomLevel));
 
+        Button button = findViewById(R.id.btMarker);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText latFinal = findViewById(R.id.editText);
+                EditText lonFinal = findViewById(R.id.editText2);
+                String latitude = latFinal.getText().toString();
+                String longitude = lonFinal.getText().toString();
+                if(latitude.equals("43.5977") || (longitude.equals("1.403"))){
+                    LatLng wild = new LatLng(43.5977, 1.403);
+                    mMap.addMarker(new MarkerOptions().position(wild).title("Final Boss !"));
+                }
+                else {
+                    Toast.makeText(MapsActivity.this, "Mauvaises informations", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         LatLng abbatoirs = new LatLng(abattoirsLat, abattoirsLon);
         LatLng capitole = new LatLng(capitoleLat, capitoleLon);
@@ -112,6 +132,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng mirail = new LatLng(mirailLat, mirailLon);
         LatLng stadium = new LatLng(stadiumLat, stadiumLon);
         LatLng ernestWallon = new LatLng(ernestLat, ernestLon);
+
+
 
         mMap.addMarker(new MarkerOptions().position(abbatoirs).title("Royaume des érudies"));
         mMap.addMarker(new MarkerOptions().position(capitole).title("Place du Roi"));
@@ -127,6 +149,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override
             public void onInfoWindowClick(Marker marker){
+                if (marker.getTitle().equals("Final Boss !")){
+                    Intent intent1 = new Intent(MapsActivity.this,FinalBossActivity.class);
+                    startActivity(intent1);
+                }
                 if (marker.getTitle().equals("Royaume des érudies")){
                     Intent intent1 = new Intent(MapsActivity.this,Enigme1Activity.class);
                     startActivity(intent1);

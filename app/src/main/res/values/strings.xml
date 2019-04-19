@@ -55,4 +55,6 @@
     <string name="la_petite_bonbonera">la petite bonbonera</string>
     <string name="le_petit_camp_nou">le petit camp nou</string>
     <string name="le_petit_bernabeu">le petit bernabeu</string>
+    <string name="longitude">Longitude</string>
+    <string name="latitude">Latitude</string>
 </resources>

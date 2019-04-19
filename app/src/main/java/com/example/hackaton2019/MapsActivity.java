@@ -146,16 +146,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
-        mMap.addMarker(new MarkerOptions().position(abbatoirs).title("Royaume des érudies"));
-        mMap.addMarker(new MarkerOptions().position(capitole).title("Place du Roi"));
-        mMap.addMarker(new MarkerOptions().position(quai).title("Royaume des Chercheurs"));
-        mMap.addMarker(new MarkerOptions().position(reynerie).title("Entrée du marché noir"));
-        mMap.addMarker(new MarkerOptions().position(arnaudB).title("Place de l'orient"));
-        mMap.addMarker(new MarkerOptions().position(palais).title("Jugement des scélérats"));
-        mMap.addMarker(new MarkerOptions().position(cherTonton).title("Royaume des pochards"));
-        mMap.addMarker(new MarkerOptions().position(mirail).title("Royaume des exhilées"));
-        mMap.addMarker(new MarkerOptions().position(stadium).title("Royaume des Bipeds"));
-        mMap.addMarker(new MarkerOptions().position(ernestWallon).title("Royaume des barbares"));
+        mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.icon)).position(abbatoirs).title("Royaume des érudies"));
+        mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.icon)).position(capitole).title("Place du Roi"));
+        mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.icon)).position(quai).title("Royaume des Chercheurs"));
+        mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.icon)).position(reynerie).title("Entrée du marché noir"));
+        mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.icon)).position(arnaudB).title("Place de l'orient"));
+        mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.icon)).position(palais).title("Jugement des scélérats"));
+        mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.icon)).position(cherTonton).title("Royaume des pochards"));
+        mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.icon)).position(mirail).title("Royaume des exhilées"));
+        mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.icon)).position(stadium).title("Royaume des Bipeds"));
+        mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.icon)).position(ernestWallon).title("Royaume des barbares"));
 
         mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override

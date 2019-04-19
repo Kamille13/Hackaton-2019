@@ -40,13 +40,13 @@ public class FinalBossActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONArray list) {
                         try {
-                            JSONObject eggs = list.getJSONObject(0);
+                            JSONObject eggs = list.getJSONObject(28);
                             final String urlPicEgg = eggs.getString("image");
                             final String name = eggs.getString("name");
                             ImageView ivLogo = findViewById(R.id.imageView2);
                             Glide.with(FinalBossActivity.this).load(urlPicEgg).into(ivLogo);
 
-                            Button reponse = findViewById(R.id.button3);
+                            Button reponse = findViewById(R.id.button2);
                             reponse.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
@@ -92,7 +92,7 @@ public class FinalBossActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONArray list) {
                         try {
-                            JSONObject character = list.getJSONObject(0);
+                            JSONObject character = list.getJSONObject(55);
                             String urlPicChar = character.getString("image");
                             ImageView ivCharacterShow = findViewById(R.id.imageView);
                             Glide.with(FinalBossActivity.this).load(urlPicChar).into(ivCharacterShow);
@@ -115,5 +115,33 @@ public class FinalBossActivity extends AppCompatActivity {
         );
 
         request.add(jsonArrayRequest2);
+
+        Button button1 = findViewById(R.id.button3);
+        Button button2 = findViewById(R.id.button);
+        Button button3 = findViewById(R.id.button4);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(FinalBossActivity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(FinalBossActivity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(FinalBossActivity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(FinalBossActivity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(FinalBossActivity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(FinalBossActivity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

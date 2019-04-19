@@ -49,7 +49,7 @@ public class Enigme5Activity extends AppCompatActivity {
                             ImageView ivLogo = findViewById(R.id.imageView12);
                             Glide.with(Enigme5Activity.this).load(urlPicEgg5).into(ivLogo);
 
-                            Button reponse = findViewById(R.id.button3);
+                            Button reponse = findViewById(R.id.button22);
                             reponse.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
@@ -123,5 +123,33 @@ public class Enigme5Activity extends AppCompatActivity {
 
         // On ajoute la requête à la file d'attente
         request.add(jsonArrayRequest2);
+
+        Button button1 = findViewById(R.id.button21);
+        Button button2 = findViewById(R.id.button23);
+        Button button3 = findViewById(R.id.button24);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Enigme5Activity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Enigme5Activity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Enigme5Activity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Enigme5Activity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Enigme5Activity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Enigme5Activity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -121,5 +121,33 @@ public class Enigme9Activity extends AppCompatActivity {
 
         // On ajoute la requête à la file d'attente
         request.add(jsonArrayRequest2);
+
+        Button button1 = findViewById(R.id.button38);
+        Button button2 = findViewById(R.id.button39);
+        Button button3 = findViewById(R.id.button40);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Enigme9Activity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Enigme9Activity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Enigme9Activity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Enigme9Activity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Enigme9Activity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Enigme9Activity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -122,5 +122,33 @@ public class Enigme4Activity extends AppCompatActivity {
 
         // On ajoute la requête à la file d'attente
         request.add(jsonArrayRequest2);
+
+        Button button1 = findViewById(R.id.button17);
+        Button button2 = findViewById(R.id.button18);
+        Button button3 = findViewById(R.id.button20);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Enigme4Activity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Enigme4Activity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Enigme4Activity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Enigme4Activity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Enigme4Activity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Enigme4Activity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

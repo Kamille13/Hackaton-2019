@@ -57,4 +57,8 @@
     <string name="le_petit_bernabeu">le petit bernabeu</string>
     <string name="longitude">Longitude</string>
     <string name="latitude">Latitude</string>
+    <string name="class_algo_public_static_void_main_string_args_int_x_125_int_z_1500_for_int_i_0_i_15_i_z_150_while_x_z_x_80_system_out_print_z"><![CDATA[class Algo { public static void main(String[] args) { int x = 125; int z = 1500; for(int i = 0; i<=15; i++){ z-=150; while( x<z) { x+=80; } } System.out.print(z); } }]]></string>
+    <string name="_1000">1000</string>
+    <string name="_900">-900</string>
+    <string name="_400">400</string>
 </resources>

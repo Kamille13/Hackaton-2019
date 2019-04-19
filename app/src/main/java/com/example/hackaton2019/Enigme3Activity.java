@@ -125,6 +125,33 @@ public class Enigme3Activity extends AppCompatActivity {
         // On ajoute la requête à la file d'attente
         request.add(jsonArrayRequest2);
 
+        Button button1 = findViewById(R.id.button16);
+        Button button2 = findViewById(R.id.button15);
+        Button button3 = findViewById(R.id.button13);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Enigme3Activity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Enigme3Activity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Enigme3Activity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Enigme3Activity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Enigme3Activity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Enigme3Activity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

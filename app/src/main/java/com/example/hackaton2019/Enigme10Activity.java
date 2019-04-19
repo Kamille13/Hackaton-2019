@@ -132,6 +132,34 @@ public class Enigme10Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button button1 = findViewById(R.id.button5);
+        Button button2 = findViewById(R.id.button7);
+        Button button3 = findViewById(R.id.button8);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Enigme10Activity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Enigme10Activity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Enigme10Activity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Enigme10Activity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Enigme10Activity.this, "Mauvaise réponse ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Enigme10Activity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

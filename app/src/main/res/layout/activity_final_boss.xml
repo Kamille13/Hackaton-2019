@@ -30,14 +30,14 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="200dp"
+        android:layout_width="377dp"
         android:layout_height="100dp"
         android:layout_marginStart="106dp"
         android:layout_marginLeft="106dp"
         android:layout_marginTop="32dp"
-        android:text="@string/quel_est_le_plus_grand_chiffre_du_monde"
         android:layout_marginEnd="106dp"
         android:layout_marginRight="106dp"
+        android:text="@string/class_algo_public_static_void_main_string_args_int_x_125_int_z_1500_for_int_i_0_i_15_i_z_150_while_x_z_x_80_system_out_print_z"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -49,7 +49,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
-        android:text="@string/infini"
+        android:text="@string/_1000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -60,7 +60,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
-        android:text="@string/_0"
+        android:text="@string/_900"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -71,7 +71,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="32dp"
-        android:text="@string/_9"
+        android:text="@string/_400"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
@@ -82,7 +82,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
-        android:text="@string/_1"
+        android:text="@string/_0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 

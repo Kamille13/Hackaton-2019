@@ -16,6 +16,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -39,9 +41,25 @@ public class Enigme1Activity extends AppCompatActivity {
                     public void onResponse(JSONArray list) {
                         try {
                             JSONObject eggs = list.getJSONObject(0);
-                            String urlPicEgg = eggs.getString("image");
+                            final String urlPicEgg = eggs.getString("image");
+                            final String name = eggs.getString("name");
                             ImageView ivLogo = findViewById(R.id.imageView2);
                             Glide.with(Enigme1Activity.this).load(urlPicEgg).into(ivLogo);
+
+                            Button reponse = findViewById(R.id.button3);
+                            reponse.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Toast.makeText(Enigme1Activity.this, "Bravo tu as trouvé la bonne réponse! ", Toast.LENGTH_LONG).show();
+                                    Intent intent = new Intent(Enigme1Activity.this,MapsActivity.class);
+                                    startActivity(intent);
+                                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                    EggsWins eggs = new EggsWins(name, urlPicEgg);
+                                    DatabaseReference studentRef = database.getReference("Eggs");
+                                    studentRef.push().setValue(eggs);
+
+                                }
+                            });
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -58,6 +76,7 @@ public class Enigme1Activity extends AppCompatActivity {
                         Log.d("VOLLEY_ERROR", "onErrorResponse: " + error.getMessage());
                     }
                 }
+
         );
 
         requestQueue.add(jsonArrayRequest);
@@ -78,7 +97,6 @@ public class Enigme1Activity extends AppCompatActivity {
                             ImageView ivCharacterShow = findViewById(R.id.imageView);
                             Glide.with(Enigme1Activity.this).load(urlPicChar).into(ivCharacterShow);
 
-
                         } catch (JSONException e) {
                             e.printStackTrace();
                             Toast.makeText(Enigme1Activity.this, "error on ImportApiCharacter", Toast.LENGTH_SHORT).show();
@@ -98,17 +116,5 @@ public class Enigme1Activity extends AppCompatActivity {
 
         request.add(jsonArrayRequest2);
 
-        Button reponsejuste = findViewById(R.id.button3);
-        reponsejuste.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(Enigme1Activity.this, "Bonne réponse, bravo!", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(Enigme1Activity.this,MapsActivity.class);
-                startActivity(intent);
-
-
-
-            }
-        });
     }
 }

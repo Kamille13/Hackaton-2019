@@ -12,11 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ListViewEggsWins"></activity>
+        <activity android:name=".ImportApiCharacters" />
         <meta-data
             android:name="com.google.android.actions"
             android:resource="@xml/network_security_config" />
 
-        <activity android:name=".ImportApiCharacters" />
         <activity android:name=".ImportApi" />
         <activity android:name=".MainActivity">
             <intent-filter>

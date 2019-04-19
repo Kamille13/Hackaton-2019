@@ -1,8 +1,11 @@
 package com.example.hackaton2019;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,6 +17,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -40,11 +45,26 @@ public class Enigme2Activity extends AppCompatActivity {
                         try {
 
                             JSONObject egg2 = list.getJSONObject(1);
-                            String eggOfFlounderWinter = egg2.getString("name");
+                            final String eggOfFlounderWinter = egg2.getString("name");
                             String rarityegg2 = egg2.getString("rarity");
-                            String urlPicEgg2 = egg2.getString("image");
+                            final String urlPicEgg2 = egg2.getString("image");
                             ImageView ivLogo = findViewById(R.id.imageView6);
                             Glide.with(Enigme2Activity.this).load(urlPicEgg2).into(ivLogo);
+
+                            Button reponse = findViewById(R.id.button9);
+                            reponse.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Toast.makeText(Enigme2Activity.this, "Bravo tu as trouvé la bonne réponse! ", Toast.LENGTH_LONG).show();
+                                    Intent intent = new Intent(Enigme2Activity.this,MapsActivity.class);
+                                    startActivity(intent);
+                                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                    EggsWins eggs = new EggsWins(eggOfFlounderWinter, urlPicEgg2);
+                                    DatabaseReference studentRef = database.getReference("Eggs");
+                                    studentRef.push().setValue(eggs);
+
+                                }
+                            });
 
                         } catch (JSONException e) {
                             e.printStackTrace();

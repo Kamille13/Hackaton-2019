@@ -1,8 +1,11 @@
 package com.example.hackaton2019;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -13,6 +16,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -39,9 +44,25 @@ public class Enigme5Activity extends AppCompatActivity {
                         try {
 
                             JSONObject egg5 = list.getJSONObject(36);
-                            String urlPicEgg5 = egg5.getString("image");
+                            final String eggName = egg5.getString("name");
+                            final String urlPicEgg5 = egg5.getString("image");
                             ImageView ivLogo = findViewById(R.id.imageView12);
                             Glide.with(Enigme5Activity.this).load(urlPicEgg5).into(ivLogo);
+
+                            Button reponse = findViewById(R.id.button3);
+                            reponse.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Toast.makeText(Enigme5Activity.this, "Bravo tu as trouvé la bonne réponse! ", Toast.LENGTH_LONG).show();
+                                    Intent intent = new Intent(Enigme5Activity.this,MapsActivity.class);
+                                    startActivity(intent);
+                                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                    EggsWins eggs = new EggsWins(eggName, urlPicEgg5);
+                                    DatabaseReference studentRef = database.getReference("Eggs");
+                                    studentRef.push().setValue(eggs);
+
+                                }
+                            });
 
                         }
                         catch (JSONException e) {
